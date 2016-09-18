@@ -1,0 +1,55 @@
+@import "web";
+
+.notifire-layout {
+  position: absolute;
+  top: 6rem;
+  left: 3rem;
+  right: 3rem;
+  bottom: 3rem;
+  overflow: hidden;
+
+  .notifire-picture-input,
+  .notifire-push-picture-input {
+    position: relative;
+    width: 100%;
+    height: 3.8rem;
+    padding: 0.3rem 0.7rem;
+    box-sizing: border-box;
+    border: 1px solid #D1D1D1;
+  }
+
+  textarea {
+    display: block;
+    width: 100%;
+    min-height: 2rem;
+    resize: vertical;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+
+  .notifire-action-name-edition {
+    margin-top: 2rem;
+  }
+
+  .notifire-content-edition, .notifire-push-content-edition, .notifire-action-args-edition {
+    height: 10rem;
+  }
+
+  .notifire-trigger {
+    button {
+      color: white;
+      border: none;
+      margin-top: 2rem;
+
+      .transition(all 0.55s @easeOutQuart);
+    }
+
+    &.loading {
+      button {
+        cursor: default;
+        background: rgba(68, 167, 72, 0.41) !important;
+      }
+    }
+  }
+
+}

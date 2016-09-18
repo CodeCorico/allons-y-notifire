@@ -1,0 +1,58 @@
+<div class="notifire-layout">
+  <rv-require name="pl-scrolls" src="/public/vendor/plumes/scrolls/pl-scrolls"></rv-require>
+
+  <div class="pl-scrolls">
+    <div class="notifire-edition-container">
+      <select class="notifire-users" value="{{notification.user}}">
+        <option value="all">- {{_('ALL')}} -</option>
+        {{#users}}
+        <option value="{{id}}">{{username}}</option>
+        {{/users}}
+      </select>
+      <input
+        class="notifire-picture-input"
+        placeholder="{{_('Picture')}}"
+        value="{{notification.picture}}"
+      />
+      <textarea
+        class="notifire-title-edition"
+        placeholder="{{_('Message')}}"
+        value="{{notification.message}}"
+      ></textarea>
+      <textarea
+        class="notifire-content-edition"
+        placeholder="{{_('Content')}}"
+        value="{{notification.content}}"
+      ></textarea>
+      <input
+        class="notifire-push-picture-input"
+        placeholder="{{_('Push Picture')}}"
+        value="{{notification.pushPicture}}"
+      />
+      <textarea
+        class="notifire-push-title-edition"
+        placeholder="{{_('Push Title')}}"
+        value="{{notification.pushTitle}}"
+      ></textarea>
+      <textarea
+        class="notifire-push-content-edition"
+        placeholder="{{_('Push Content')}}"
+        value="{{notification.pushContent}}"
+      ></textarea>
+      <textarea
+        class="notifire-action-name-edition"
+        placeholder="{{_('Event')}}"
+        value="{{notification.eventName}}"
+      ></textarea>
+      <textarea
+        class="notifire-action-args-edition"
+        placeholder="{{_('Event arguments')}}"
+        value="{{notification.eventArgs}}"
+      ></textarea>
+    </div>
+    <div class="notifire-trigger {{loading ? 'loading' : ''}}">
+      <button class="accent-bg" on-click="fireNotification">{{_(loading ? 'FIRING...' : 'FIRE')}}</button>
+    </div>
+  </div>
+
+</div>

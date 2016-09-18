@@ -1,0 +1,20 @@
+<div class="pl-section">
+  <section class="notifire-details">
+    <button class="pl-button-indicator opened" on-click="toggle">
+      <div class="pl-button-indicator-bg accent-bg"></div>
+      <img class="pl-button-indicator-notification-picture" src="{{picture}}">
+      <p class="pl-button-indicator-notification-message">{{{message}}}</p>
+      <div class="pl-button-indicator-number accent-bg showed">99+</div>
+    </button>
+
+    <section class="pl-notifications-panel theme-dark opened">
+      <ul class="pl-notifications-panel-list">
+        <li class="pl-notifications-panel-item">
+          <img class="notifire-details-message-image {{picture ? 'show' : ''}}" src="{{picture}}">
+          <p>{{{content}}}</p>
+          <p class="pl-notifications-panel-item-time">{{_('a second ago')}}</p>
+        </li>
+      </ul>
+    </section>
+  </section>
+</div>
