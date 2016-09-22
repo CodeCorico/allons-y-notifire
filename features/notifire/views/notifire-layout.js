@@ -12,7 +12,7 @@
   ) {
 
     function _detailsChanged(details) {
-      $.each(['message', 'content', 'picture'], function(i, key) {
+      ['message', 'content', 'picture'].forEach(function(key) {
         NotifireLayout.observe('notification.' + key, function(value) {
           details.set(key, value);
         });

@@ -4,12 +4,12 @@ module.exports = {
   url: '/notifire',
 
   enter: [
-    '$FaviconService', '$BodyDataService', '$Page', '$i18nService', '$Layout',
-  function($FaviconService, $BodyDataService, $Page, $i18nService, $Layout) {
+    '$FaviconService', '$BodyDataService', '$Page', '$i18nService', '$Layout', '$next',
+  function($FaviconService, $BodyDataService, $Page, $i18nService, $Layout, $next) {
     var user = $BodyDataService.data('user');
 
     if (user.permissionsPublic.indexOf('notifire-access') < 0) {
-      return window.page.redirect('/');
+      return $next();
     }
 
     document.title = $i18nService._('Notifire') + ' - ' + $BodyDataService.data('web').brand;
