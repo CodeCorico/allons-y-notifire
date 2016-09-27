@@ -12,7 +12,7 @@ module.exports = {
       return $next();
     }
 
-    document.title = $i18nService._('Notifire') + ' - ' + $BodyDataService.data('web').brand;
+    document.title = $i18nService._('Notifire') + ' - ' + $Page.get('web').brand;
     $FaviconService.update('/public/notifire/favicon.png');
 
     $Layout.selectApp('Notifire', false);
@@ -35,7 +35,9 @@ module.exports = {
             icon: 'fa fa-check',
             group: 'group-notifire-details',
             ready: function(button) {
-              button.action(false);
+              if ($Layout.get('screen') == 'screen-desktop') {
+                button.action(false);
+              }
             },
             beforeGroup: function(context, $group, userBehavior, callback) {
               context.require('notifire-details').then(function() {
