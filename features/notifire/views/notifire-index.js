@@ -8,6 +8,8 @@
     var _user = $BodyDataService.data('user') || null;
 
     if (_user && _user.permissionsPublic && _user.permissionsPublic.indexOf('notifire-access') > -1) {
+      $Page.remember(/^\/notifire\/?$/);
+
       $Page.push('apps', {
         name: $i18nService._('Notifire'),
         select: function() {

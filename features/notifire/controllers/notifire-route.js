@@ -34,11 +34,7 @@ module.exports = {
           $Page.rightButtonAdd('notifire-details', {
             icon: 'fa fa-check',
             group: 'group-notifire-details',
-            ready: function(button) {
-              if ($Layout.get('screen') == 'screen-desktop') {
-                button.action(false);
-              }
-            },
+            autoOpen: 'main',
             beforeGroup: function(context, $group, userBehavior, callback) {
               context.require('notifire-details').then(function() {
                 $NotifireService.details(context.findChild('name', 'notifire-details'));
