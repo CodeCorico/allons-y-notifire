@@ -1,6 +1,29 @@
 'use strict';
 
 module.exports = [{
+  event: 'update(web/route)',
+  controller: function($socket, UserModel, $message) {
+    if (!this.validMessage($message, {
+      path: ['string', 'filled']
+    })) {
+      return;
+    }
+
+    if (!$socket.user || !$socket.user.id || !$message.path.match(/^\/notifire\/?$/)) {
+      return;
+    }
+
+    UserModel.addHomeTile({
+      date: new Date(),
+      url: '/notifire',
+      cover: '/public/notifire/notifire-home.jpg',
+      large: true,
+      centered: {
+        title: 'NOTIFIRE'
+      }
+    }, $socket.user.id);
+  }
+}, {
   event: 'create(notifire/notification)',
   permissions: ['notifire-access'],
   controller: function($socket, UserModel, $message) {
