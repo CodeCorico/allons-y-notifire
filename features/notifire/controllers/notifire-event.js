@@ -16,7 +16,7 @@ module.exports = [{
     UserModel.addHomeTile({
       date: new Date(),
       url: '/notifire',
-      cover: '/public/notifire/notifire-home.jpg',
+      cover: '/public/notifire/notifire-home.png',
       large: true,
       centered: {
         title: 'NOTIFIRE'

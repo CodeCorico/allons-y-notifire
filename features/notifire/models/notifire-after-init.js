@@ -4,13 +4,13 @@ module.exports = function(GroupModel, $done) {
   var PERMISSIONS = {
         'notifire-access': {
           title: 'Access to the Notifire app',
-          description: 'Access to the Notifire app',
+          description: 'Access to the Notifire app.',
           isPublic: true
         }
       },
       NOTIFIRE_HOME_TILE = {
         url: '/notifire',
-        cover: '/public/notifire/notifire-home.jpg',
+        cover: '/public/notifire/notifire-home.png',
         large: true,
         centered: {
           title: 'NOTIFIRE'
