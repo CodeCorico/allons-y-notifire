@@ -3,15 +3,13 @@
 # Allons-y-notifire
 
 [![Join the chat at https://gitter.im/CodeCorico/allons-y](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/CodeCorico/allons-y?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Issue Stats](http://issuestats.com/github/codecorico/allons-y-notifire/badge/issue)](http://issuestats.com/github/codecorico/allons-y)
-[![Issue Stats](http://issuestats.com/github/codecorico/allons-y-notifire/badge/pr)](http://issuestats.com/github/codecorico/allons-y)
 [![npm version](https://badge.fury.io/js/allons-y-notifire.svg)](https://badge.fury.io/js/allons-y-notifire)
 
 Allons-y-notifire is an [allons-y](https://github.com/CodeCorico/allons-y) module that adds a notifications edition app.
 
 ## Wiki
 
-The documentation, wiki and every Allons-y-notifire resources can be found in the [Allons-y.io platform](http://allons-y.io).
+The documentation, wiki and every Allons-y-notifire resources can be found in the [Allons-y.io platform](https://allons-y.io).
 
 ## Want to help?
 
